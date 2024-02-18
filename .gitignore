@@ -1,3 +1,4 @@
-*.env
-.env
-schema.*
+.dbInfo
+.vscode
+.vs
+.idea
