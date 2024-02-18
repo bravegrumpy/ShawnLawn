@@ -3,3 +3,19 @@ version: 1
 #   variables:
 #     key: value
 backend:
+  phases:
+    build:
+      commands:
+        - amplifyPush --simple
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd shawn-lawn-by-shays
+        - npm ci
+    build:
+      - npm run build
+  artifacts:
+    baseDirectory: /shawn-lawn-by-shays/
+    files:
+      - - '**/*'
