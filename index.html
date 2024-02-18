@@ -5,23 +5,35 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     </head>
     <body>
-        <header>
-            <article>
-                <h1>ShawnLawn</h1>
-                <p>Transform Your Lawn</p>
-            </article>
-            <div id="app"></div>
-        </header>
-        <main>
-            <script type="text/javascript">
-                const app = document.getElementById('app');
-                const header = document.createElement('h2');
-                const text = 'Develop. Preview. Ship';
-                headerContent = document.createTextNode(text);
-                app.appendChild(header);
-            </script>
-        </main>
+        <div id="app"></div>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            const domNode = document.getElementById("app");
+
+            function Header(props) {
+                return (
+                    <>
+                        <h1>{props.title}</h1>
+                        <p>{props.headline}</p>
+                    </>
+                );
+            }
+
+            function Home() {
+                return (
+                    <div>
+                        <Header title="ShawnLawn" headline="Transform your lawn TODAY"/>
+                    </div>
+                );
+            }
+
+
+            const root = ReactDOM.createRoot(app);
+            root.render(<Home />);
+        </script>
     </body>
 </html>
