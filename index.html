@@ -12,17 +12,16 @@
                 <h1>ShawnLawn</h1>
                 <p>Transform Your Lawn</p>
             </article>
+            <div id="app"></div>
         </header>
         <main>
-            <div id="app"></div>
+            <script type="text/javascript">
+                const app = document.getElementById('app');
+                const header = document.createElement('h2');
+                const text = 'Develop. Preview. Ship';
+                headerContent = document.createTextNode(text);
+                app.appendChild(header);
+            </script>
         </main>
-        
-        <script type="text/javascript">
-            const app = document.getElementById('app');
-            const header = document.createElement('h1');
-            const text = 'Develop. Preview. Ship';
-            headerContent = document.createTextNode(text);
-            app.appendChild(header);
-        </script>
     </body>
 </html>
